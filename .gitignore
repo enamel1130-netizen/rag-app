@@ -1,0 +1,12 @@
+# APIキー（絶対に、GitHubに、アップロードしない）
+.env
+
+# Chromaのデータベース
+chroma_db/
+
+# Pythonのキャッシュ
+__pycache__/
+*.pyc
+
+# Windowsの隠しファイル
+Thumbs.db
