@@ -1,0 +1,10 @@
+streamlit
+langchain
+langchain-chroma
+langchain-huggingface
+langchain-groq
+langchain-core
+python-dotenv
+pandas
+openpyxl
+sentence-transformers
