@@ -13,7 +13,6 @@ from langchain_core.messages import HumanMessage, AIMessage
 
 load_dotenv()
 
-import streamlit as st
 GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
 
 # ===== 設定 =====
@@ -69,7 +68,7 @@ def setup_chain():
 
     retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 
-    llm = ChatGroq(model="llama-3.1-8b-instant")
+    llm = ChatGroq(model="llama-3.1-8b-instant", api_key=GROQ_API_KEY)
 
     prompt = ChatPromptTemplate.from_messages([
         ("system",
