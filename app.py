@@ -13,6 +13,9 @@ from langchain_core.messages import HumanMessage, AIMessage
 
 load_dotenv()
 
+import streamlit as st
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
+
 # ===== 設定 =====
 PARTS_FILE = "parts_master.xlsx"      # ① 元データ（人間が編集する部品マスタ）
 DB_DIR = "chroma_db"                  # ② 検索用DBの保存フォルダ（ディスクに永続化）
